@@ -14,9 +14,9 @@
 
     <div class="hud" aria-hidden="true">
       <div class="readout">
-        <span class="k">分数 · SCORE</span>
+        <span class="k">SCORE</span>
         <span id="score" class="v">0</span>
-        <span id="combo" class="combo" hidden>连击 ×1</span>
+        <span id="combo" class="combo" hidden>COMBO ×1</span>
       </div>
       <div class="mid">
         <span id="level" class="level">LEVEL 01</span>
@@ -24,7 +24,7 @@
         <div id="powers" class="powers"></div>
       </div>
       <div class="readout right">
-        <span class="k">最高 · BEST</span>
+        <span class="k">BEST</span>
         <span id="best" class="v small">0</span>
         <div class="tools">
           <button id="sound" class="tool" type="button" aria-label="声音" title="声音">
@@ -47,11 +47,11 @@
         <p class="gate-kicker">BRICK BREAKER</p>
         <h1 class="gate-title">打砖块</h1>
         <p class="gate-sub">B R E A K O U T &nbsp;·&nbsp; A R K A N O I D</p>
-        <p id="gate-text" class="gate-text">每次发球三颗。白砖 1 下、黄砖 2 下、红砖 3 下；底部钢墙打不碎，先找缺口把球送上去。打中白色回弹核心，会放出弹力球自动清场；进度会自动保存。</p>
-        <p class="gate-best">最高分 <b id="gate-best">0</b></p>
+        <p id="gate-text" class="gate-text">每次发球 3 颗。白砖 1 下、黄砖 2 下、红砖 3 下；底部钢墙留缺口。击碎白色 CORE 自动清场；进度自动保存。</p>
+        <p class="gate-best">BEST <b id="gate-best">0</b></p>
         <p id="gate-save" class="gate-save" hidden></p>
         <div class="gate-actions">
-          <button id="continue" class="btn" type="button" hidden>继续</button>
+          <button id="continue" class="btn" type="button" hidden>CONTINUE</button>
           <button id="start" class="btn primary" type="button">开始游戏</button>
           <button id="levels" class="btn" type="button">选择关卡</button>
         </div>
@@ -86,10 +86,10 @@
     <div id="overScreen" class="screen" hidden>
       <div class="gate-inner">
         <p id="over-kicker" class="gate-kicker">GAME OVER</p>
-        <h2 id="over-title" class="screen-title">砖还在</h2>
-        <p class="over-score"><span>本局得分</span><b id="over-score">0</b></p>
-        <p id="over-best" class="gate-best">最高分 <b>0</b></p>
-        <p id="over-level" class="over-level">到达 LEVEL 01</p>
+        <h2 id="over-title" class="screen-title">GAME OVER</h2>
+        <p class="over-score"><span>SCORE</span><b id="over-score">0</b></p>
+        <p id="over-best" class="gate-best">BEST <b>0</b></p>
+        <p id="over-level" class="over-level">LEVEL 01</p>
         <div class="gate-actions">
           <button id="again" class="btn primary" type="button">再来一局</button>
         </div>
@@ -100,7 +100,7 @@
       <div class="level-inner">
         <p class="gate-kicker">LEVEL SELECT</p>
         <h2 class="screen-title">选择关卡</h2>
-        <p class="level-note">选关后从该关重新开始，分数和生命重置。</p>
+        <p class="level-note">选关会重置分数和生命。</p>
         <div id="level-grid" class="level-grid"></div>
         <div class="gate-actions">
           <button id="level-back" class="btn" type="button">返回</button>
