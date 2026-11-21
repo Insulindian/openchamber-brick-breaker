@@ -1,0 +1,37 @@
+{
+  "name": "openchamber-brick-breaker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Brick Breaker (打砖块): a Breakout / Arkanoid style side-rail mini-game for OpenChamber, with destructible and indestructible bricks.",
+  "keywords": [
+    "openchamber",
+    "openchamber-extension",
+    "breakout",
+    "arkanoid",
+    "brick-breaker",
+    "打砖块",
+    "html5-canvas",
+    "mini-game"
+  ],
+  "openchamber": {
+    "apiVersion": 1,
+    "engines": { "openchamber": ">=2.7.0" },
+    "id": "brick-breaker",
+    "name": "打砖块",
+    "icon": "icon.svg",
+    "contributes": {
+      "panel": { "entry": "panel/index.html" },
+      "attach": true
+    }
+  },
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --format=iife --platform=browser --target=es2020 --outfile=panel/main.js"
+  },
+  "dependencies": {
+    "@openchamber/sdk": "2.7.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

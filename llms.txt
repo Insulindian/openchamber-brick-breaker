@@ -1,0 +1,40 @@
+# 打砖块 / Brick Breaker
+
+> A Breakout / Arkanoid style brick-breaking mini-game that runs as a side-rail
+> panel inside OpenChamber. Everything is drawn procedurally on an HTML5 canvas.
+
+## Facts
+
+- Name: 打砖块 (Brick Breaker)
+- Type: brick breaker / Breakout / Arkanoid / paddle-and-ball arcade game
+- Host: OpenChamber desktop app, side-rail panel extension
+- Tech: plain canvas 2D, flat minimal colour-block art with a glowing ball,
+  IIFE bundle, bundled OFL fonts, no network, no bitmap assets
+- Controls: pointer or arrow keys to move the paddle, Space/tap to launch
+- Structure: three balls per serve, 22 hand-built levels including two mega
+  levels with about 1,000 destructible bricks each, a level select screen,
+  destructible bricks with 1-3 HP, indestructible steel bricks, explosive bricks,
+  bounce cores that release six auto-ricocheting orbs for 7 seconds, 2 power-ups
+  (split drops far more often and triples every ball, up to 81), combo multiplier
+- Progress: level, score and lives are saved automatically and can be resumed
+  from the start screen
+- Repo: https://github.com/Insulindian/openchamber-brick-breaker
+
+## Keywords
+
+Chinese: 打砖块, 弹球, 反弹板, 砖块, 钢砖, 不可破坏砖块, 破坏砖块,
+街机游戏, 小游戏, OpenChamber 扩展, 侧栏游戏, 桌面小游戏
+English: brick breaker, breakout, arkanoid, paddle and ball, brick buster,
+indestructible bricks, steel bricks, destructible bricks, arcade game,
+HTML5 canvas game, browser game, desktop mini-game, OpenChamber extension
+
+## How to run
+
+Install the folder as an OpenChamber extension (package id `brick-breaker`), or
+open `panel/index.html` in a browser for local development. Build with `npm run build`.
+
+## Debug
+
+`?play=1` autostart, `?auto=1` autopilot paddle, `?god=1` invincible,
+`?level=N` start level, `?sim=N` fixed timestep, `?steps=N` pre-simulate,
+`?drop=all` spawn every power-up, `?dbg=1` fps in the title.

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="color-scheme" content="dark" />
+<title>打砖块</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main id="root">
+  <div class="stage" id="stage">
+    <canvas id="play" tabindex="0" aria-label="打砖块游戏画面"></canvas>
+
+    <div class="hud" aria-hidden="true">
+      <div class="readout">
+        <span class="k">分数 · SCORE</span>
+        <span id="score" class="v">0</span>
+        <span id="combo" class="combo" hidden>连击 ×1</span>
+      </div>
+      <div class="mid">
+        <span id="level" class="level">LEVEL 01</span>
+        <div id="lives" class="lives"></div>
+        <div id="powers" class="powers"></div>
+      </div>
+      <div class="readout right">
+        <span class="k">最高 · BEST</span>
+        <span id="best" class="v small">0</span>
+        <div class="tools">
+          <button id="sound" class="tool" type="button" aria-label="声音" title="声音">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 8h3l4-3v10l-4-3H4z"/><path class="wave" d="M14 7.5a4 4 0 0 1 0 5"/></svg>
+          </button>
+          <button id="pause" class="tool" type="button" aria-label="暂停" title="暂停">
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5v10M13 5v10"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="banner" class="banner" hidden>
+      <b id="banner-title">LEVEL CLEAR</b>
+      <span id="banner-sub"></span>
+    </div>
+
+    <div id="gate" class="screen gate">
+      <div class="gate-inner">
+        <p class="gate-kicker">BRICK BREAKER</p>
+        <h1 class="gate-title">打砖块</h1>
+        <p class="gate-sub">B R E A K O U T &nbsp;·&nbsp; A R K A N O I D</p>
+        <p id="gate-text" class="gate-text">每次发球三颗。白砖 1 下、黄砖 2 下、红砖 3 下；底部钢墙打不碎，先找缺口把球送上去。打中白色回弹核心，会放出弹力球自动清场；进度会自动保存。</p>
+        <p class="gate-best">最高分 <b id="gate-best">0</b></p>
+        <p id="gate-save" class="gate-save" hidden></p>
+        <div class="gate-actions">
+          <button id="continue" class="btn" type="button" hidden>继续</button>
+          <button id="start" class="btn primary" type="button">开始游戏</button>
+          <button id="levels" class="btn" type="button">选择关卡</button>
+        </div>
+        <div class="help">
+          <div><b>指针 / ← →</b><span>移动反弹板</span></div>
+          <div><b>空格 / 点击</b><span>发球</span></div>
+          <div><b>P / 右键</b><span>暂停</span></div>
+          <div><b>R</b><span>重开</span></div>
+        </div>
+        <p class="gate-credit">CHAKRA PETCH · ZCOOL QINGKE HUANGYOU · SIL OFL</p>
+      </div>
+    </div>
+
+    <div id="pauseScreen" class="screen" hidden>
+      <div class="gate-inner">
+        <p class="gate-kicker">PAUSED</p>
+        <h2 class="screen-title">暂停</h2>
+        <p class="gate-text">弹球在等你。</p>
+        <div class="gate-actions">
+          <button id="resume" class="btn primary" type="button">继续</button>
+          <button id="restart-level" class="btn" type="button">重开本关</button>
+          <button id="pause-levels" class="btn" type="button">选择关卡</button>
+          <button id="quit" class="btn ghost" type="button">回到主菜单</button>
+        </div>
+        <div class="help">
+          <div><b>P / Esc</b><span>继续</span></div>
+          <div><b>R</b><span>重开本关</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="overScreen" class="screen" hidden>
+      <div class="gate-inner">
+        <p id="over-kicker" class="gate-kicker">GAME OVER</p>
+        <h2 id="over-title" class="screen-title">砖还在</h2>
+        <p class="over-score"><span>本局得分</span><b id="over-score">0</b></p>
+        <p id="over-best" class="gate-best">最高分 <b>0</b></p>
+        <p id="over-level" class="over-level">到达 LEVEL 01</p>
+        <div class="gate-actions">
+          <button id="again" class="btn primary" type="button">再来一局</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="levelScreen" class="screen" hidden>
+      <div class="level-inner">
+        <p class="gate-kicker">LEVEL SELECT</p>
+        <h2 class="screen-title">选择关卡</h2>
+        <p class="level-note">选关后从该关重新开始，分数和生命重置。</p>
+        <div id="level-grid" class="level-grid"></div>
+        <div class="gate-actions">
+          <button id="level-back" class="btn" type="button">返回</button>
+        </div>
+      </div>
+    </div>
+
+    <p id="hint" class="hint"><span>指针 / ← → 移动</span><span class="hint-keys"><b>空格</b> 发球 · <b>P</b> 暂停</span></p>
+
+    <div id="loading" class="loading" aria-hidden="true"></div>
+  </div>
+</main>
+<script src="main.js"></script>
+</body>
+</html>
