@@ -567,7 +567,7 @@ canvas {
 .banner {
   position: absolute;
   z-index: 5;
-  top: 27%;
+  top: 20%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
