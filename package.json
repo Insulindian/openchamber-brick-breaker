@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "description": "Brick Breaker (打砖块): a Breakout / Arkanoid style side-rail mini-game for OpenChamber, with destructible and indestructible bricks.",
+  "repository": "github:Insulindian/openchamber-brick-breaker",
+  "homepage": "https://github.com/Insulindian/openchamber-brick-breaker",
   "keywords": [
     "openchamber",
     "openchamber-extension",
